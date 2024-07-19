@@ -12,7 +12,7 @@ export const AdminUsers = () => {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
-        },
+        },  
       });
       const data = await response.json();
       if (!response.ok) {
