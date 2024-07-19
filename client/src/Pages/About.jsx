@@ -7,7 +7,6 @@ export const About = () => {
   return (
     <>
         <div className="full-page">
-
       <main>
         <section className="about-section">
           <div className="container grid grid-two-cols">
