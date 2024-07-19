@@ -35,11 +35,11 @@ app.get("/", (req, res) => {
 });
 
 const port = 5000;
+  
+connect().then(() => {
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });
-connect().then(() => {
-  console.log("Connected to database");
 }).catch((error) => {
   console.log("Error While adding database")
 });
