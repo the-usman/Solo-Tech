@@ -33,11 +33,13 @@ app.use(express.static(path.resolve(__dirname, "../client", "dist")));
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "Client", "dist", "index.html"));
 });
-connect().then(() => {
-  const port = 5000;
+
+const port = 5000;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });
+connect().then(() => {
+  console.log("Connected to database");
 }).catch((error) => {
   console.log("Error While adding database")
 });
